@@ -1,0 +1,116 @@
+
+body{
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+main header{
+    background-color: var(--cor-terciaria);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px -11px 31px 0px rgba(0, 0, 0, 0.25) inset;
+
+}
+main header h1 img{
+    width: 121px;
+    padding: 30px 0 30px 0;
+}
+
+section.acoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+section.acoes .texto{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 8px;
+    font-size: 16px;
+}
+section.acoes .texto h2{
+    font-weight: normal;
+    cursor: pointer;
+}
+section.acoes .texto .active{
+    font-weight: bold;
+}
+section.acoes .texto .active::after{
+    content: "";
+    display: flex;
+    width: 39.85px;
+    height: 3px; 
+    background-color: var(--cor-secundaria);
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    animation: active 0.5s ;
+
+}
+@keyframes active{
+    from{width: 0px;}
+}
+section.acoes .login .active{
+    padding-top: 10px;
+}
+section.acoes form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700; 
+    font-size: 18px; 
+}
+form input::placeholder{
+    color: var(--cor-terciaria);
+}
+section.acoes  form label{
+    padding-top: 10px;
+}
+section.acoes  form input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+section.acoes  form input[type="email"], section.acoes  form input[type="password"], section.acoes  form input[type="text"]{
+    background-color: transparent;
+    outline: none;
+    color: var(--cor-terciaria);
+    border-bottom: 3px solid var(--cor-terciaria);
+    border-left: none; border-right: none; border-top: none;
+}
+section.acoes  form input[type="submit"]{
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    width: 50%;
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: 700; 
+    color: var(--cor-contraste);
+    cursor: pointer;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.checkbox input{
+    margin-top: 9px;
+}
+.checkbox label{
+    font-size: 16px;
+    margin: 0;
+}
+section.acoes .inscrever{
+    display: none;
+}

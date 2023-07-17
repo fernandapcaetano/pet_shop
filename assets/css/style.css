@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Inter;
+    src: url(fontes/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root{
+    --cor-fundo: #FFDAB9;
+    --cor-secundaria: #F08080;
+    --cor-terciaria: #F4978E;
+    --cor-contraste: #fff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    text-transform: uppercase;
+}
