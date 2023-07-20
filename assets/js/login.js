@@ -1,5 +1,16 @@
-login_button = document.querySelector('section.acoes .texto h2').addEventListener("click", activeButton);
+let acoes = document.querySelectorAll(".acao");
+let paineis = document.querySelectorAll(".painel");
 
-function activeButton() {
-    alert('oiii')
-}
+acoes.forEach((acao, index) => {
+  acao.addEventListener("click", () => {
+    paineis.forEach((painel) => {
+      painel.classList.remove("active")
+    });
+    acoes.forEach((acao) => {
+      acao.classList.remove("active");
+    });
+    paineis[index].classList.add("active");
+    acoes[index].classList.add("active");
+  });
+});
+
